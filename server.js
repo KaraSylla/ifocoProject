@@ -25,7 +25,7 @@ var maDb;
 
 //chargement des variables d'environnement du fichier .env
 dotenv.load();
-// app.set('port', process.env.PORT || 25);
+app.set('port', process.env.PORT || 5000);
 
 // fixation du moteur de visualisation & indication de l'emplacement des fichiers jade
 app.set('view engine', 'jade');
@@ -160,10 +160,10 @@ app.post('/test', (req, res) => {
 MongoClient.connect(URL, (err, db) => {
   if(err){
     return;
-    console.log('impossible de se connecter à la base');
+    console.log('impossible de se connecter à la base de donnée');
   }
   maDb = db;
-  app.listen(1986, () => {
-    console.log('connecté');
+  app.listen(app.set('port'), () => {
+    console.log('serveur en écoute sur le port, ' + app.set('port'));
   });
 });
