@@ -18,7 +18,8 @@ var MongoClient = require('mongodb').MongoClient;
 // var URL ='mongodb://karaIfocop:Alchi86.@ds011903.mlab.com:11903/multijoueur';
 // url de connexion à la base mongodb
 // var URL ='mongodb://:27017/reseausocial';
-var URL ='mongodb://KaraSylla:database86..@ds023644.mlab.com:23644/socialgenust';
+var URL = process.env.MONGODB_URI;
+// var URL ='mongodb://KaraSylla:database86..@ds023644.mlab.com:23644/socialgenust';
 // déclaration variable pour la bdd
 var maDb;
 
