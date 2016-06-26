@@ -15,9 +15,10 @@ var utilitaires = require('./utilitaires');
 var bodyParser = require('body-parser');
 // charge module mongodb + récupération de la propriété Mongoclient de l'obj mongodb
 var MongoClient = require('mongodb').MongoClient;
-
+// var URL ='mongodb://karaIfocop:Alchi86.@ds011903.mlab.com:11903/multijoueur';
 // url de connexion à la base mongodb
-var URL ='mongodb://localhost:27017/socialNetwork';
+// var URL ='mongodb://:27017/reseausocial';
+var URL ='mongodb://KaraSylla:database86..@ds023644.mlab.com:23644/socialgenust';
 // déclaration variable pour la bdd
 var maDb;
 
@@ -25,7 +26,7 @@ var maDb;
 //chargement des variables d'environnement du fichier .env
 dotenv.load();
 // app.set('port', process.env.PORT || 25);
-console.log(dotenv.load())
+
 // fixation du moteur de visualisation & indication de l'emplacement des fichiers jade
 app.set('view engine', 'jade');
 app.set('views', 'jadefiles');
