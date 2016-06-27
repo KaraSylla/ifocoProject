@@ -26,6 +26,7 @@ var maDb;
 
 //chargement des variables d'environnement du fichier .env
 dotenv.load();
+// fixation -- serveur en ecoute sur le 5000 du serveur heroku
 app.set('port', process.env.PORT || 5000);
 
 // fixation du moteur de visualisation & indication de l'emplacement des fichiers jade
