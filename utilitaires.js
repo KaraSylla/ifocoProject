@@ -24,8 +24,8 @@ exports.emailConfirmation = (req, res) => {
   var transporter = nodemailer.createTransport({
     service : 'Mailgun',
     auth : {
-      user : process.env.MAILGUN_SMTP_LOGIN,
-      pass: process.env.MAILGUN_SMTP_PASSWORD
+      user : process.env.MAILGUN_USERNAME,
+      pass: process.env.MAILGUN_PASSWORD
     }
     // 'smtps://kara.sylla%40gmail.com:alchimiste1986.@smtp.gmail.com'
   });
